@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=IBM+Plex+Sans+KR&display=swap");
+
+* {
+  font-family: "IBM Plex Sans KR", sans-serif;
+}
+
+body {
+  margin: 0px;
+}
+
+.button {
+  padding: 10px;
+  font-size: 18px;
+}
+
+a[href] {
+  color: dodgerblue;
+  text-decoration-line: none;
+  background-color: white;
+  border: 0px;
+}
+
+.header {
+  box-shadow: rgb(92, 104, 109) 0px 7px 29px 0px;
+  padding: 10px;
+}
+
+.header h1 {
+  font-family: "Changa One", cursive;
+  font-size: 40px;
+}
+
+.header .button {
+  color: black;
+  text-decoration-line: none;
+  background-color: white;
+  border: 0px;
+}
+
+.header .button:hover {
+  background-color: gray;
+  color: white;
+}
+
+.main {
+  margin: 8px auto;
+  padding: 8px;
+  width: 320px;
+  height: 200px;
+  text-align: center;
+}
+
+.main h1 {
+  font-size: 1.5em;
+}
+
+.main p {
+  width: 100%;
+  height: auto;
+  text-align: left;
+  margin: 8px;
+}
+
+.main input[type="text"],
+[type="password"],
+[type="tel"],
+[type="date"],
+[type="number"] {
+  border: 2px solid #000;
+  border-radius: 5px;
+  height: 40px;
+  line-height: normal;
+  color: #282828;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding: 0 6px;
+  padding-left: 12px;
+}
+
+.main .button {
+  background-color: darkslateblue;
+  color: white;
+  border: 2px solid darkslateblue;
+  border-radius: 10px;
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  padding: 0 6px;
+}
+
+.main .signup {
+  text-align: center;
+}

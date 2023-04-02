@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Internet Programming Assignment 2 - signup</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Welcom to INTERNET-PROGRAMMING SHOP</h1>
+      <a class="button" href="login.html">로그인</a>
+      <a class="button" href="signup.html">회원가입</a>
+    </div>
+    <div class="main">
+      <form method="post" action="login.html">
+        <h1>개인 정보</h1>
+        <p>
+          <label
+            >이름 :
+            <input
+              name="name"
+              type="text"
+              size="25"
+              placeholder="이름을 입력하세요"
+              autocomplete="on"
+              autofocus
+              required
+          /></label>
+        </p>
+        <p>
+          성별 :
+          <label>
+            <input name="gender" type="radio" value="남성" checked />
+            남성</label
+          >
+          <label> <input name="gender" type="radio" value="여성" /> 여성</label>
+        </p>
+        <p>
+          <label>생일 : <input name="birthday" type="date" required /></label>
+        </p>
+        <p>
+          <label
+            >학년 :
+            <input
+              name="grade"
+              type="number"
+              min="1"
+              max="6"
+              step="1"
+              value="1"
+              required
+          /></label>
+        </p>
+        <p>
+          <label
+            >전화번호 :
+            <input
+              name="phoneNumber"
+              type="tel"
+              placeholder="010-####-####"
+              pattern="\d{3}-\d{4}-\d{4}"
+              required
+          /></label>
+        </p>
+        <p>
+          <label
+            >아이디 :
+            <input
+              name="userID"
+              type="text"
+              placeholder="아이디를 입력하세요"
+              autocomplete="on"
+              required
+          /></label>
+        </p>
+        <p>
+          <label
+            >비밀번호 :
+            <input
+              name="password"
+              type="password"
+              placeholder="비밀번호를 입력하세요"
+              required
+          /></label>
+        </p>
+        <p>
+          <label
+            >비밀번호 확인 :
+            <input
+              name="passwordCheck"
+              type="password"
+              placeholder="비밀번호 확인"
+              required
+          /></label>
+        </p>
+        <p>
+          <label
+            ><input name="agree" type="checkbox" required /> (필수)개인정보
+            수집에 동의하십니까?</label
+          >
+        </p>
+        <p>
+          <input class="button" type="submit" value="회원가입" />
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
