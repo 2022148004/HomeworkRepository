@@ -3,6 +3,7 @@
 
 * {
   font-family: "IBM Plex Sans KR", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
@@ -275,6 +276,14 @@ select {
     width: 50%;
   }
 
+  .container {
+    width: 100%;
+  }
+
+  .search_container {
+    width: 100%;
+  }
+
   .wrapper {
     flex-direction: column;
   }
@@ -286,6 +295,14 @@ select {
   }
 
   .items .item {
+    width: 100%;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .search_container {
     width: 100%;
   }
 
