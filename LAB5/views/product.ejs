@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Internet Programming Assignment 5 - product</title>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Welcom to INTERNET-PROGRAMMING SHOP</h1>
+      <div class="navi">
+        <a class="button" href="/">메인</a>
+        <a class="button" href="/login">로그인</a>
+        <a class="button" href="/signup">회원가입</a>
+      </div>
+    </div>
+    <div class="main">
+      <div class="product_wrapper">
+        <div class="product_container">
+          <div class="product_image">
+            <img src="/img/<%= product.image%>" />
+          </div>
+          <div class="infomation">
+            <div class="id">
+              <h1>ID</h1>
+              <p><%= product.product_id%></p>
+            </div>
+            <div class="image">
+              <h1>image</h1>
+              <p><%= product.image%></p>
+            </div>
+            <div class="title">
+              <h1>Name</h1>
+              <p><%= product.title%></p>
+            </div>
+            <div class="category">
+              <h1>Category</h1>
+              <p><%= product.category%></p>
+            </div>
+            <div class="price">
+              <h1>Price</h1>
+              <p>$<%= product.price%></p>
+            </div>
+          </div>
+        </div>
+        <div class="comment_container">
+          <form
+            class="comment_form"
+            action="/product/<%= product.product_id%>"
+            method="POST"
+          >
+            <div class="comment_info">
+              <div class="form-text">
+                <textarea
+                  class="form-control"
+                  name="text"
+                  id="text"
+                  rows="8"
+                ></textarea>
+              </div>
+              <div class="form-button">
+                <input type="submit" value="comment" />
+              </div>
+            </div>
+          </form>
+          <div class="comments">
+            <% for(var comment of comments) { %>
+            <div class="comment"><%= comment.text %></div>
+            <% } %>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <h1>About Us</h1>
+        <p>
+          abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+          abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+          abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+          abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+          abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+          abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+          abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+          abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+          abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+          abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+        </p>
+      </div>
+    </div>
+    <script>
+      window.onload = function () {
+        var commentTextarea = document.getElementById("text");
+        commentTextarea.value = "";
+      };
+    </script>
+  </body>
+</html>

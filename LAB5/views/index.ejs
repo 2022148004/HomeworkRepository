@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Internet Programming Assignment 5 - index</title>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Welcom to INTERNET-PROGRAMMING SHOP</h1>
+      <div class="navi">
+        <a class="button" href="/">메인</a>
+        <a class="button" href="/login">로그인</a>
+        <a class="button" href="/signup">회원가입</a>
+      </div>
+    </div>
+    <div class="main">
+      <div class="wrapper">
+        <div class="search_container">
+          <form class="search_form" action="/" method="POST">
+            <div class="form_info">
+              <label for="category">Categotry: </label>
+              <select name="category" id="category">
+                <option value="ALL">ALL</option>
+                <option value="Astronomy & Space Science">
+                  Astronomy & Space Science
+                </option>
+                <option value="Science Fiction">Science Fiction</option>
+                <option value="Psychology">Psychology</option>
+                <option value="Science & Math">Science & Math</option>
+                <option value="History & Criticism">History & Criticism</option>
+              </select>
+            </div>
+            <div class="form_info">
+              <label for="book_name">Book name: </label>
+              <input
+                name="book_name"
+                id="book_name"
+                type="text"
+                placeholder="ex) cosmos"
+              />
+            </div>
+            <div class="form_info">
+              <label for="sort_type">Choose a sort: </label>
+              <select name="sort_type" id="sort_type">
+                <option value="none">none</option>
+                <option value="descending">descending order of price</option>
+                <option value="increasing">increasing order of price</option>
+                <option value="alphabetically">alphabetically</option>
+              </select>
+            </div>
+            <div class="form_info">
+              <input type="submit" value="Filter results" />
+            </div>
+          </form>
+        </div>
+        <div class="container">
+          <h1>Books</h1>
+          <div class="items">
+            <% for(var book of products) { %>
+            <div
+              class="item"
+              onclick="window.location.href='/product/<%= book.product_id%>'"
+            >
+              <span class="img-text"><%= book.title %></span>
+              <span class="img-price">$ <%= book.price %></span>
+              <img src="img/<%= book.image %>" />
+            </div>
+            <% } %>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <h1>About Us</h1>
+        <p>
+          abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+          abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+          abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+          abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+          abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+          abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+          abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+          abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+          abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+          abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
